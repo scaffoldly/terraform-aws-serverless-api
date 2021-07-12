@@ -1,9 +1,11 @@
 output "service_name" {
-  value = var.name
+  value       = var.name
+  description = "Re-output of var.name"
 }
 
 output "repository_name" {
-  value = module.repository.name
+  value       = module.repository.name
+  description = "The created repository name (within the organization)"
 }
 
 output "stage_urls" {
@@ -11,6 +13,7 @@ output "stage_urls" {
     for stage in module.stage :
     stage.name => stage.url
   }
+  description = "(Deprecated) A map of all the URLs created keyed by stage"
 }
 
 output "stage_config" {
@@ -22,6 +25,7 @@ output "stage_config" {
       service_name = var.name
     }
   }
+  description = "A map of various properties for each stage, keyed by stage"
 }
 
 output "stage_env_vars" {
@@ -29,4 +33,5 @@ output "stage_env_vars" {
     for stage in module.stage :
     stage.name => stage.stage_env_vars
   }
+  description = "The combined environment variables for each stage, keyed by stage"
 }
