@@ -71,9 +71,9 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_repository_name"></a> [repository\_name](#output\_repository\_name) | n/a |
-| <a name="output_service_name"></a> [service\_name](#output\_service\_name) | n/a |
-| <a name="output_stage_config"></a> [stage\_config](#output\_stage\_config) | n/a |
-| <a name="output_stage_env_vars"></a> [stage\_env\_vars](#output\_stage\_env\_vars) | n/a |
-| <a name="output_stage_urls"></a> [stage\_urls](#output\_stage\_urls) | n/a |
+| <a name="output_repository_name"></a> [repository\_name](#output\_repository\_name) | The created repository name (within the organization) |
+| <a name="output_service_name"></a> [service\_name](#output\_service\_name) | Re-output of var.name |
+| <a name="output_stage_config"></a> [stage\_config](#output\_stage\_config) | A map of various properties for each stage, keyed by stage |
+| <a name="output_stage_env_vars"></a> [stage\_env\_vars](#output\_stage\_env\_vars) | The combined environment variables for each stage, keyed by stage |
+| <a name="output_stage_urls"></a> [stage\_urls](#output\_stage\_urls) | (Deprecated) A map of all the URLs created keyed by stage |
 <!-- END_TF_DOCS -->
