@@ -4,9 +4,15 @@ variable "repository_name" {
 }
 
 variable "api_gateway_stages" {
-  type = map({
-    api_gateway_domain = string
-  })
+  type = map(
+    object({
+      api_gateway_domain = string
+    })
+  )
   description = "Output of api_gatway_stages from scaffoldly/terraform-aws-api-gateway"
 }
 
+variable "path" {
+  type        = string
+  description = "The desired path to the service in API Gateway"
+}
