@@ -1,22 +1,8 @@
-locals {
-  template_suffix          = split("/", var.template)[1]
-  scrubbed_template_suffix = replace(local.template_suffix, "-template", "")
-  repo_name                = var.repo_name != null ? var.repo_name : "${var.name}-${local.scrubbed_template_suffix}"
-}
-
-module "repository" {
-  source  = "scaffoldly/repository/github"
-  version = "0.15.1"
-
-  template = var.template
-  name     = local.repo_name
-}
-
 module "aws_iam" {
   source  = "scaffoldly/serverless-api-iam/aws"
   version = "0.15.2"
 
-  repository_name = module.repository.name
+  repository_name = var.repository.name
 
   depends_on = [
     module.repository
