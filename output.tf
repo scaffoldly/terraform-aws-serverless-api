@@ -19,3 +19,12 @@ output "stage_config" {
   }
   description = "A map of various properties for each stage, keyed by stage"
 }
+
+output "deployer_credentials" {
+  value = {
+    access_key = module.aws_iam.deployer_access_key
+    secret_key = module.aws_iam.deployer_secret_key
+  }
+  sensitive  = true
+  desciption = "The Access Key and Secret Key for Serverless API deployments for this repository"
+}
