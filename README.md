@@ -47,8 +47,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_aws_iam"></a> [aws\_iam](#module\_aws\_iam) | scaffoldly/serverless-api-iam/aws | 1.0.0 |
-| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.1 |
+| <a name="module_aws_iam"></a> [aws\_iam](#module\_aws\_iam) | scaffoldly/serverless-api-iam/aws | 1.0.1 |
+| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.3 |
 
 ## Resources
 
@@ -66,6 +66,7 @@ No resources.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_deployer_credentials"></a> [deployer\_credentials](#output\_deployer\_credentials) | The Access Key and Secret Key for Serverless API deployments for this repository |
 | <a name="output_repository_name"></a> [repository\_name](#output\_repository\_name) | Re-output of var.repository\_name |
 | <a name="output_service_name"></a> [service\_name](#output\_service\_name) | Re-output of var.path |
 | <a name="output_stage_config"></a> [stage\_config](#output\_stage\_config) | A map of various properties for each stage, keyed by stage |
