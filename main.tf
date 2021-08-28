@@ -1,6 +1,6 @@
 module "aws_iam" {
   source  = "scaffoldly/serverless-api-iam/aws"
-  version = "1.0.1"
+  version = "1.0.2"
 
   repository_name = var.repository_name
 }
