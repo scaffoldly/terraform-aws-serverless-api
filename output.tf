@@ -15,8 +15,8 @@ output "stage_config" {
       api_id          = stage.api_id
       api_resource_id = stage.root_resource_id
       base_url        = stage.url
-      repo_name       = var.repository_name
-      service_name    = var.path
+      service_name    = var.repository_name
+      service_slug    = var.path
     }
   }
   description = "A map of various properties for each stage, keyed by stage"
