@@ -14,7 +14,7 @@ module "repository" {
 
 module "aws_iam" {
   source  = "scaffoldly/serverless-api-iam/aws"
-  version = "0.15.3"
+  version = "0.15.4"
 
   repository_name = module.repository.name
 
