@@ -12,11 +12,13 @@ output "stage_config" {
   value = {
     for stage in module.stage :
     stage.name => {
-      api_id          = stage.api_id
-      api_resource_id = stage.root_resource_id
-      base_url        = stage.url
-      service_name    = var.repository_name
-      service_slug    = var.path
+      api_id           = stage.api_id
+      websocket_api_id = stage.websocket_api_id
+      api_resource_id  = stage.root_resource_id
+      base_url         = stage.url
+      websocket_url    = stage.websocket_url
+      service_name     = var.repository_name
+      service_slug     = var.path
     }
   }
   description = "A map of various properties for each stage, keyed by stage"
