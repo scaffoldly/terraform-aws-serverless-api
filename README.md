@@ -48,7 +48,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_aws_iam"></a> [aws\_iam](#module\_aws\_iam) | scaffoldly/serverless-api-iam/aws | 1.0.11 |
-| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.5 |
+| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.7 |
 
 ## Resources
 
@@ -58,7 +58,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_api_gateway_stages"></a> [api\_gateway\_stages](#input\_api\_gateway\_stages) | Output of api\_gatway\_stages from scaffoldly/terraform-aws-api-gateway | <pre>map(<br>    object({<br>      api_gateway_domain = string<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_api_gateway_stages"></a> [api\_gateway\_stages](#input\_api\_gateway\_stages) | Output of api\_gatway\_stages from scaffoldly/terraform-aws-api-gateway | <pre>map(<br>    object({<br>      api_gateway_domain           = string<br>      api_gateway_websocket        = optional(bool)<br>      api_gateway_websocket_domain = optional(string)<br>    })<br>  )</pre> | n/a | yes |
 | <a name="input_path"></a> [path](#input\_path) | The desired path to the service in API Gateway | `string` | n/a | yes |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The repository name | `string` | n/a | yes |
 
