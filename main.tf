@@ -7,7 +7,7 @@ module "aws_iam" {
 
 module "stage" {
   source  = "scaffoldly/serverless-api-stage/aws"
-  version = "1.0.5"
+  version = "1.0.7"
 
   for_each = var.api_gateway_stages
 
@@ -15,6 +15,8 @@ module "stage" {
   repository_name = var.repository_name
   path            = var.path
   stage           = each.key
-}
 
+  websocket        = each.value.api_gateway_websocket != null ? true : false
+  websocket_domain = each.value.api_gateway_websocket_domain != null ? each.value.api_gateway_websocket_domain : ""
+}
 
