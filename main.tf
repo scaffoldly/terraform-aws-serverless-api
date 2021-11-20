@@ -17,6 +17,7 @@ module "stage" {
   stage           = each.key
 
   websocket        = each.value.api_gateway_websocket != null ? true : false
-  websocket_domain = each.value.api_gateway_websocket_domain != null ? each.value.api_gateway_websocket_domain : ""
+  # websocket_domain = each.value.api_gateway_websocket_domain != null ? each.value.api_gateway_websocket_domain : ""'
+  websocket_domain = each.value.api_gateway_websocket != null ? each.value.api_gateway_domain : ""
 }
 
