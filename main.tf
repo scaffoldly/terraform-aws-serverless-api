@@ -16,7 +16,7 @@ module "stage" {
   path            = var.path
   stage           = each.key
 
-  websocket        = each.value.api_gateway_websocket != false ? true : false
+  websocket        = each.value.api_gateway_websocket
   websocket_domain = each.value.api_gateway_websocket_domain != null ? each.value.api_gateway_websocket_domain : ""
 }
 
