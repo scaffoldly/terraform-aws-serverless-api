@@ -19,6 +19,8 @@ output "stage_config" {
       websocket_url    = stage.websocket_url
       service_name     = var.repository_name
       service_slug     = var.path
+      topic_arn        = stage.topic_arn
+      role_arn         = stage.role_arn
     }
   }
   description = "A map of various properties for each stage, keyed by stage"
