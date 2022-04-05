@@ -20,6 +20,7 @@ output "stage_config" {
       service_name     = var.repository_name
       service_slug     = var.path
       topic_arn        = stage.topic_arn
+      topic_arn_s3     = stage.s3_topic_arn
       role_arn         = stage.role_arn
     }
   }
