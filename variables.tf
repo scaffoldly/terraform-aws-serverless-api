@@ -35,3 +35,8 @@ variable "bucket_allow_public_access" {
   default     = false
   description = "Allow Objects in the S3 bucket to have a Public ACL"
 }
+variable "bucket_name" {
+  type        = string
+  default     = ""
+  description = "Set the bucket name, default: var.stage-var.repository_name"
+}
