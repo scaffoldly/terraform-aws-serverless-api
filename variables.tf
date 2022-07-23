@@ -29,3 +29,9 @@ variable "path" {
   type        = string
   description = "The desired path to the service in API Gateway"
 }
+
+variable "bucket_allow_public_access" {
+  type        = bool
+  default     = false
+  description = "Allow Objects in the S3 bucket to have a Public ACL"
+}
