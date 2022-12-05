@@ -40,3 +40,17 @@ variable "bucket_name" {
   default     = ""
   description = "Set the bucket name, default: var.stage-var.repository_name"
 }
+variable "saml_trust" {
+  type = map(
+    object({
+      trust_actions                 = list(string)
+      trust_principal_identifiers   = list(string)
+      trust_principal_type          = string
+      trust_condition_saml_test     = string
+      trust_condition_saml_variable = string
+      trust_condition_saml_values   = list(string)
+    })
+  )
+  description = "Output of trust from saml-to/iam/aws module"
+  default     = null
+}
