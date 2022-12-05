@@ -48,7 +48,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_aws_iam"></a> [aws\_iam](#module\_aws\_iam) | scaffoldly/serverless-api-iam/aws | 1.0.12 |
-| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.30 |
+| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.32 |
 
 ## Resources
 
@@ -64,6 +64,7 @@ No resources.
 | <a name="input_kms_stages"></a> [kms\_stages](#input\_kms\_stages) | Output of kms\_stages from terraform-aws-bootstrap | <pre>map(<br>    object({<br>      key_id    = string<br>      key_alias = string<br>    })<br>  )</pre> | `{}` | no |
 | <a name="input_path"></a> [path](#input\_path) | The desired path to the service in API Gateway | `string` | n/a | yes |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The repository name | `string` | n/a | yes |
+| <a name="input_saml_trust"></a> [saml\_trust](#input\_saml\_trust) | Output of trust from saml-to/iam/aws module | <pre>map(<br>    object({<br>      trust_actions                 = list(string)<br>      trust_principal_identifiers   = list(string)<br>      trust_principal_type          = string<br>      trust_condition_saml_test     = string<br>      trust_condition_saml_variable = string<br>      trust_condition_saml_values   = list(string)<br>    })<br>  )</pre> | `null` | no |
 
 ## Outputs
 
