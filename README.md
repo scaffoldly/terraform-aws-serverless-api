@@ -37,7 +37,7 @@ module "serverless_api" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0, < 1.1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0, < 1.3 |
 
 ## Providers
 
@@ -48,7 +48,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_aws_iam"></a> [aws\_iam](#module\_aws\_iam) | scaffoldly/serverless-api-iam/aws | 1.0.12 |
-| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.34 |
+| <a name="module_stage"></a> [stage](#module\_stage) | scaffoldly/serverless-api-stage/aws | 1.0.38 |
 
 ## Resources
 
