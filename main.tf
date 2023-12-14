@@ -1,13 +1,13 @@
 module "aws_iam" {
   source  = "scaffoldly/serverless-api-iam/aws"
-  version = "1.0.13"
+  version = "1.0.14"
 
   repository_name = var.repository_name
 }
 
 module "stage" {
   source  = "scaffoldly/serverless-api-stage/aws"
-  version = "1.0.39"
+  version = "1.0.40"
 
   for_each = var.api_gateway_stages
 
